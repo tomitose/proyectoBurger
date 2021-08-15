@@ -1,0 +1,48 @@
+.imgMenus{
+    width: 250px;
+    border-radius: 7px;
+}
+
+.imgMenuCompra{
+    width: 65px;
+    margin-right: 15px;
+    border-radius: 5px;
+
+}
+
+.tituloBurgers {
+    display: flex;
+    justify-content: center;
+}
+
+.listado {
+    text-align: center;
+    margin: 50px 0;
+    border-bottom: 2px solid #d38529;
+    color: #b23d00;
+    font-family: 'DM Serif Display', serif;
+}
+
+
+/*Lista Hamburgesas */
+
+.burgers{
+    text-align: center;
+    padding-left: 0;
+}
+
+
+.precioBurger{
+    color: rgb(0, 206, 89);
+}
+
+.btnAgregar {
+    padding: 4px;
+}
+
+
+/* Botón finalizar pedido*/
+
+#btnFinal{
+    margin-top: 70px;
+}
