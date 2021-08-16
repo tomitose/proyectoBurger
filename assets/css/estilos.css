@@ -12,21 +12,21 @@
 }
 
 .navCustom{
-    background-image: linear-gradient(125deg, #dea242 0, #da9537 16.67%, #d38529 33.33%, #c97218 50%, #bf5f04 66.67%, #b74d00 83.33%, #b23d00 100%);    
+    background-color: #54a503;
     font-size: 200;
     font-weight: 500;
     justify-content: space-around;
 }
 
 .navCustom ul li a{
-    color: #b30202;
+    color: #ffffff;
 }
 
 
 .btn-primary{
-    background-color: #da9537;
-    border-color: #8d2525;
-    color: #8d2525;
+    background-color: #000000;
+    border-color: #258d36;
+    color: #ffffff;
     border: 1px solid transparent;
     border-radius: 4px;
 }
@@ -52,8 +52,9 @@
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
     box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
     0 1px 3px rgba(0,0,0,.2);
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#dea242),to(#b74d00));
-    background-image: linear-gradient(#dea242 10%,#b74d00 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#000000),to(#000000));
+    background-image: linear-gradient(#000000 10%,#34b700 100%);
+    color: #ffffff;
 }
 
 
