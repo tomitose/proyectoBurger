@@ -31,6 +31,18 @@
     border-radius: 4px;
 }
 
+.btn-primary:hover {
+    color: #fff;
+    background-color: #486443;
+    border-color: #ffffff;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: #000000;
+    border-color: #ffffff;
+}
+
 
 /* Carousel */
 
@@ -93,3 +105,8 @@
 /* MQuery */
 
 
+@media (max-width: 800px) {
+    .img-custom{
+        height: auto;
+    }
+  }

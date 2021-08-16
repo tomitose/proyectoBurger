@@ -19,7 +19,7 @@ listaHamburguesas.forEach(function(hamburguesa){
     <p class= "precioBurger"><b> Precio: $ ${hamburguesa.precio}</b></p>
     <p> Cantidad: 
     <input type='number' id="cantidad${hamburguesa.id}" value="${hamburguesa.cantidad}" min="0" max="50"></p><br>
-    <button id="${hamburguesa.id} class="btnAgregar btn-primary">Agregar</button>
+    <button id="${hamburguesa.id}" class="btnAgregar btn-primary">Agregar</button>
     </div>`;
     ul.innerHTML = html;
 });
@@ -55,7 +55,7 @@ function resumenPedido() {
 
     if(hayHamburguesa){
         pedido+=`<div class="tot">Total: $ ${total} </div>`
-        pedido+=`<button id='confirmar'>Confirmar</button>`
+        pedido+=`<button id='confirmar'>Confirmar pedido</button>`
     }
     else{
         pedido+=`<div class="tot">No hay hamburguesas en el pedido</div>`
