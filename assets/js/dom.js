@@ -63,7 +63,6 @@ function resumenPedido() {
 
     $(".modal-body").html(pedido);
     $("#confirmar").click(function(){
-        alert("Su pedido ha sido confirmado")
-        location.reload();
+        window.location.href=`formulariopedido.html`;
     });
 }

@@ -83,7 +83,7 @@
 }
 
 .img-local{
-    width: -webkit-fill-available;
+    width: 600px;
     height: auto;
     vertical-align: middle;
     object-fit: cover;
@@ -108,5 +108,16 @@
 @media (max-width: 800px) {
     .img-custom{
         height: auto;
+    }
+    .img-local{
+        width: 400px;
+    }
+  }
+
+
+  @media (max-width: 280px) {
+
+    .img-local{
+        width: 250px;
     }
   }
