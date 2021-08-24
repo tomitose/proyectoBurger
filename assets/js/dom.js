@@ -67,6 +67,3 @@ function resumenPedido() {
         location.reload();
     });
 }
-
-
-
