@@ -1,0 +1,11 @@
+.imgBurger{
+    display: flex;
+    justify-content: center;
+}
+
+.imgBurgerArmado{
+    width: 500px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 7px;
+    margin-top: 20px;
+}
