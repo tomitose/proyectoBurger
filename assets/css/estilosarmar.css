@@ -8,3 +8,20 @@
     border-radius: 7px;
     margin-top: 30px;
 }
+
+
+#formularioArmado{
+    max-width: 800px;
+    margin: 50px auto;
+    width: 100%;
+    padding: 0;
+}
+
+
+
+#btnAgregarArmado{
+    margin: 0 auto;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+}
