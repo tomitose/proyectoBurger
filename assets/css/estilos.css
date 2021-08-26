@@ -98,11 +98,102 @@
     padding-top: 50px;
 }
 
+/* Footer */
 
 
+footer{
+    width: 100%;
+    background: #54a503;
+    color: #fff;
+}
 
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-body div h1 {
+    font-size: 20px;
+}
+
+.container-body div label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.column1{
+    max-width: 400px;
+}
+
+.column1 p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+.column2{
+    max-width: 400px;
+}
+
+.column2 .row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.column3{
+    max-width: 400px;
+}
+
+.row-custom{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row-custom label{
+    margin-left: 20px;
+}
+
+.logo-foot {
+    width: 35px;
+}
+
+.container-foot{
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+}
 
 /* MQuery */
+
+@media screen and (max-width: 1100px){
+    .container-body{
+        flex-wrap: wrap;
+    }
+
+    .column1{
+        max-width: 100%;
+    }
+
+    .column2,.column3{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    .column1,.column2,.column3{
+        margin-top: 20px;
+    }
+}
 
 
 @media (max-width: 800px) {
@@ -110,7 +201,9 @@
         height: auto;
     }
     .img-local{
-        width: 400px;
+        width: 300px;
+        padding: 0;
+        margin-top: 50px;
     }
   }
 
