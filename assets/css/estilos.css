@@ -165,6 +165,11 @@ footer{
     width: 35px;
 }
 
+.logoFootBck:hover{
+    background-color: #fff;
+    width: 40px;
+}
+
 .container-foot{
     background-color: #000000;
     width: 100%;

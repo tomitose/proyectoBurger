@@ -8,7 +8,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         const random = Math.floor(Math.random() * (max - min) + min);
         const chef = json[random]
         console.log(chef)
-        alert("El chef de hoy es " + chef.name)
+        alert("El chef del día es " + chef.name)
     })
 })
 .catch((error) => {
