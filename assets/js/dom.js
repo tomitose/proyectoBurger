@@ -1,10 +1,14 @@
 // array de tipos de hamburguesas//
 
 const listaHamburguesas = [
-    {nombre:"CLÁSICA", precio: 530, id: 1, img:"clasicBurger.jpg", cantidad: 0},
-    {nombre:"CHICKEN", precio: 550, id: 2, img:"chickenBurger.jpg", cantidad: 0},
-    {nombre:"BACON", precio: 570, id: 3, img:"baconBurger.jpg", cantidad: 0},
-    {nombre:"BACONERA", precio: 580, id: 4, img:"baconBurger2.jpg", cantidad: 0},
+    {nombre:"CLÁSICA", precio: 530, id: 1, img:"clasicBurger.jpg", cantidad: 0, carac:"(Pan de papa, carne smasheada, queso cheddar, lechuga, tomate, salsa especial y ketchup + papas)"},
+    {nombre:"CHICKEN", precio: 550, id: 2, img:"chickenBurger.jpg", cantidad: 0 ,carac:"(Pan de papa, pechuga de pollo, queso emmental, bacon, salsa especial + papas)"},
+    {nombre:"BACON", precio: 570, id: 3, img:"baconBurger.jpg", cantidad: 0,carac:"(Pan de papa, carne smasheada, queso cheddar, salsa especial + papas)"},
+    {nombre:"BACONERA", precio: 580, id: 4, img:"baconBurger2.jpg", cantidad: 0,carac:"(Pan de papa, doble carne smasheada, queso cheddar, queso emmental, mayonesa casera + papas)"},
+    {nombre:"ANIMAL", precio: 580, id: 5, img:"animalBurger.jpg", cantidad: 0,carac:"(Pan de papa con semillas, carne smasheada, queso fundido, cebolla morada, tomate con especias, lechuga morada, mayonesa casera + papas)"},
+    {nombre:"DELUX", precio: 580, id: 6, img:"deluxBurger.jpg", cantidad: 0,carac:"(Pan de papa, doble carne smasheada premium, doble queso cheddar, lechuga, tomate, cebolla, pepinillos especiados, salsa especial hot + papas)"},
+    {nombre:"GOURMET", precio: 580, id: 7, img:"gourmetBurger.jpg", cantidad: 0,carac:"(Pan de papa con semillas, doble carne smasheada, doble queso cheddar, cebolla caramelizada, pepinillos, morrones, salsa especial + papas)"},
+
 ]
 
 
@@ -14,8 +18,9 @@ const ul = document.querySelector(".burgers");
 let html = "";
 
 listaHamburguesas.forEach(function(hamburguesa){
-    html +=`<div class= "col"> <img src="../assets/img/${hamburguesa.img}"" class="imgMenus">
+    html +=`<div class= "col etiquetaBurgers"> <img src="../assets/img/${hamburguesa.img}"" class="imgMenus">
     <p><b>${hamburguesa.nombre}</b></p>
+    <p class= "caracteristicas">${hamburguesa.carac}</p>
     <p class= "precioBurger"><b> Precio: $ ${hamburguesa.precio}</b></p>
     <p> Cantidad: 
     <input type='number' id="cantidad${hamburguesa.id}" value="${hamburguesa.cantidad}" min="0" max="50"></p><br>

@@ -14,10 +14,24 @@
     max-width: 800px;
     margin: 50px auto;
     width: 100%;
-    padding: 0;
+    padding: 0 20px;
+}
+
+#formularioArmado h1 {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 
+#formularioArmado h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#formularioArmado h4 {
+    font-size: 16px;
+    opacity: .80;
+}
 
 #btnAgregarArmado{
     margin: 0 auto;
@@ -25,3 +39,24 @@
     width: 400px;
     justify-content: center;
 }
+
+
+.opcion {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/* MQuery */
+
+
+@media (max-width: 600px) {
+    .imgBurgerArmado{
+        width: 300px;
+    }
+
+    #btnAgregarArmado{
+        width: 300px;
+    }
+  }

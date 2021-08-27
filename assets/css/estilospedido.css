@@ -38,6 +38,10 @@
 
 /*Lista Hamburgesas */
 
+.etiquetaBurgers{
+    margin: 30px 0;
+}
+
 .burgers{
     text-align: center;
     padding-left: 0;
@@ -46,6 +50,12 @@
 
 .precioBurger{
     color: rgb(0, 206, 89);
+}
+
+.caracteristicas {
+    opacity: 0.7;
+    font-size: 14px;
+    padding-bottom: 30px;
 }
 
 .btnAgregar {

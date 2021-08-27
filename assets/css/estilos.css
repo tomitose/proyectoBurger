@@ -15,7 +15,7 @@
     background-color: #54a503;
     font-size: 200;
     font-weight: 500;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .navCustom ul li a{
@@ -73,7 +73,6 @@
 /* Nosotros */
 
 #nosotros{
-    height: 100vh;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -126,7 +125,7 @@ footer{
 
 .container-body div label {
     font-size: 14px;
-    margin-top: 10px;
+    padding: 10px;
 }
 
 .column1{
@@ -163,6 +162,7 @@ footer{
 
 .logo-foot {
     width: 35px;
+    height: 35px;
 }
 
 .logoFootBck:hover{
