@@ -10,7 +10,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         const random = Math.floor(Math.random() * (max - min) + min);
         const chef = json[random]        
         console.log(chef)
-        html += ( `<div><h4> Chef del día es <b>${chef.name}</b> </h4></div>`);
+        html += ( `<div><h4> Chef del día es <h4 class="nombreChef"> <b>${chef.name}</b> </h4></div>`);
         div.innerHTML = html;
     })
 })

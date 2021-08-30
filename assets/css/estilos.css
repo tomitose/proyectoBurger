@@ -106,6 +106,14 @@
     padding: 50px 30px;
 }
 
+.seccion-titulo h2{
+    border-bottom: 2px solid #54a503;
+    color: #000000;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
 .seccion-titulo p{
     padding-top: 50px;
 }
@@ -123,9 +131,20 @@
 #chefDiaImg{
     height: 700px;
     padding: 25px;
+    box-shadow: 1px 1px 7px;
+    border-radius: 4px;
 }
 
+.rating {
+    color: #54a503;
+}
 
+.nombreChef{
+    box-shadow: 1px 1px 7px;
+    border-radius: 6px;
+    padding: 5px;
+    color: #54a503;
+}
 
 
 /* Footer */
