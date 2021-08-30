@@ -1,14 +1,17 @@
+const div = document.getElementById("chefDiaCustom");
+let html = "";
 
 fetch("https://jsonplaceholder.typicode.com/users")
 .then((response) => {
     //Fetch se ejecuto OK
     response.json().then((json) => {
         let min = 0;
-        let max = json.length - 1
+        let max = json.length - 1;
         const random = Math.floor(Math.random() * (max - min) + min);
-        const chef = json[random]
+        const chef = json[random]        
         console.log(chef)
-        alert("El chef del día es " + chef.name)
+        html += ( `<div><h4> Chef del día es <b>${chef.name}</b> </h4></div>`);
+        div.innerHTML = html;
     })
 })
 .catch((error) => {
