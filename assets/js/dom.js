@@ -7,7 +7,7 @@ const listaHamburguesas = [
     {nombre:"BACONERA", precio: 580, id: 4, img:"baconBurger2.jpg", cantidad: 0,carac:"(Pan de papa, doble carne smasheada, queso cheddar, queso emmental, mayonesa casera + papas)"},
     {nombre:"ANIMAL", precio: 580, id: 5, img:"animalBurger.jpg", cantidad: 0,carac:"(Pan de papa con semillas, carne smasheada, queso fundido, cebolla morada, tomate con especias, lechuga morada, mayonesa casera + papas)"},
     {nombre:"DELUX", precio: 580, id: 6, img:"deluxBurger.jpg", cantidad: 0,carac:"(Pan de papa, doble carne smasheada premium, doble queso cheddar, lechuga, tomate, cebolla, pepinillos especiados, salsa especial hot + papas)"},
-    {nombre:"GOURMET", precio: 580, id: 7, img:"gourmetBurger.jpg", cantidad: 0,carac:"(Pan de papa con semillas, doble carne smasheada, doble queso cheddar, cebolla caramelizada, pepinillos, morrones, salsa especial + papas)"},
+    {nombre:"BOMBASTER", precio: 580, id: 7, img:"gourmetBurger.jpg", cantidad: 0,carac:"(Pan de papa con semillas, doble carne smasheada, doble queso cheddar, cebolla caramelizada, pepinillos, morrones, salsa especial + papas)"},
 
 ]
 

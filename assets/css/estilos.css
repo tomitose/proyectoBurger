@@ -52,6 +52,19 @@
 }
 
 
+.carousel-item h4{
+    background-color: #000000;
+    border-radius: 6px;
+    padding: 5px 0;
+}
+
+.carousel-item h3{
+    background-color: #000000;
+    border-radius: 6px;
+    padding: 10px;
+    display: inline-block;
+}
+
 .img-custom{
     height: 94vh;
     object-fit: cover;
@@ -243,4 +256,11 @@ footer{
     .img-local{
         width: 250px;
     }
+    .row-custom label{
+        margin-left: 0;
+    }
   }
+
+
+
+
