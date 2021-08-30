@@ -97,6 +97,28 @@
     padding-top: 50px;
 }
 
+
+/* Mapas */
+
+#mapas {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#map{
+    height: 500px;
+    width: 500px
+}
+
+#map2{
+    height: 500px;
+    width: 500px
+}
+
+
+
 /* Footer */
 
 
@@ -197,6 +219,9 @@ footer{
 
     .column1,.column2,.column3{
         margin-top: 20px;
+    }
+    #mapas {
+        flex-direction: column;
     }
 }
 
