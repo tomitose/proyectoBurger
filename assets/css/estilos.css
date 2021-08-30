@@ -53,7 +53,7 @@
 
 
 .img-custom{
-    height: 92vh;
+    height: 94vh;
     object-fit: cover;
 }
 
@@ -98,7 +98,7 @@
 }
 
 
-/* Mapas */
+/* Mapas 
 
 #mapas {
     height: 100vh;
@@ -117,7 +117,7 @@
     width: 500px
 }
 
-
+*/
 
 /* Footer */
 
@@ -220,9 +220,9 @@ footer{
     .column1,.column2,.column3{
         margin-top: 20px;
     }
-    #mapas {
+/*    #mapas {
         flex-direction: column;
-    }
+    }*/
 }
 
 
