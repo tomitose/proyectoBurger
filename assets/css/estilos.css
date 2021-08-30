@@ -71,7 +71,7 @@
 }
 
 .btn-menu{
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration:none;
     padding: 5px;
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
@@ -99,7 +99,9 @@
     height: auto;
     vertical-align: middle;
     object-fit: cover;
-    padding: 50px 30px;
+    box-shadow: 1px 1px 7px;
+    border-radius: 4px;
+    margin-top: 30px;
 }
 
 .seccion-titulo{
@@ -130,7 +132,6 @@
 
 #chefDiaImg{
     height: 700px;
-    padding: 25px;
     box-shadow: 1px 1px 7px;
     border-radius: 4px;
 }
@@ -243,18 +244,6 @@ footer{
     }
 }
 
-@media screen and (max-width: 720px){
-
-    .column1,.column2,.column3{
-        margin-top: 20px;
-    }
-    #chefDia {
-        flex-direction: column;
-    }
-    
-}
-
-
 @media (max-width: 800px) {
     .img-custom{
         height: auto;
@@ -264,11 +253,24 @@ footer{
         padding: 0;
         margin-top: 50px;
     }
-  }
+}
+
+@media screen and (max-width: 720px){
+
+    .column1,.column2,.column3{
+        margin-top: 20px;
+    }
+    #chefDia {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+}
+
 
 @media (max-width: 500px) {
     #chefDiaImg{
-        height: 500px;
+        height: 450px;
     }
 }
 
