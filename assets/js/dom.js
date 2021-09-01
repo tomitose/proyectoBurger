@@ -11,7 +11,7 @@ const listaHamburguesas = [
 ]
 
 
-//lista hamburguesas//
+//Lista hamburguesas//
 
 const ul = document.querySelector(".burgers");
 
@@ -30,8 +30,19 @@ listaHamburguesas.forEach(function(hamburguesa){
 });
 
 
+//Carrito//
 
-//función pedido final//
+$(".btnAgregar").click(function() {
+    $("#agregadoCarrito").css("display","block");
+});
+
+
+
+$("#agregadoCarrito").click(function(){
+    resumenPedido()
+});
+
+//Función pedido final//
 
 
 let elemento = document.getElementById("btnFinal");

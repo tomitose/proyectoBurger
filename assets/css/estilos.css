@@ -11,6 +11,15 @@
     margin-left: 50px;
 }
 
+#agregadoCarrito{
+    border-radius: 10px;
+    border: 2px #198754 solid;
+    margin-left: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+
 .navCustom{
     background-color: #54a503;
     font-size: 200;
@@ -216,10 +225,6 @@ footer{
     height: 35px;
 }
 
-.logoFootBck:hover{
-    background-color: #fff;
-    width: 40px;
-}
 
 .container-foot{
     background-color: #000000;
