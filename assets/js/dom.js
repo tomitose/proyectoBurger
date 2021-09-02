@@ -23,8 +23,7 @@ listaHamburguesas.forEach(function(hamburguesa){
     <p class= "caracteristicas">${hamburguesa.carac}</p>
     <p class= "precioBurger"><b> Precio: $ ${hamburguesa.precio}</b></p>
     <p> Cantidad: 
-    <input type='number' id="cantidad${hamburguesa.id}" value="${hamburguesa.cantidad}" min="0" max="50"></p><br>
-    <button id="${hamburguesa.id}" class="btnAgregar btn-primary">Agregar</button>
+    <input type='number' class="cantidad" id="cantidad${hamburguesa.id}" value="${hamburguesa.cantidad}" min="0" max="50"></p><br>
     </div>`;
     ul.innerHTML = html;
 });
@@ -32,15 +31,17 @@ listaHamburguesas.forEach(function(hamburguesa){
 
 //Carrito//
 
-$(".btnAgregar").click(function() {
-    $("#agregadoCarrito").css("display","block");
-});
-
 
 
 $("#agregadoCarrito").click(function(){
     resumenPedido()
+    let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+    myModal.show();
 });
+
+$(".cantidad").change(function(){
+    resumenPedido()
+})
 
 //Función pedido final//
 
@@ -52,6 +53,7 @@ elemento.addEventListener("click",resumenPedido);
 function resumenPedido() {
     let total = 0;
     let pedido = "";
+    let listadoPedido = []
     let hayHamburguesa = false;
 
     listaHamburguesas.forEach((hamburguesa) => {
@@ -66,6 +68,7 @@ function resumenPedido() {
             <img class= "imgMenuCompra" src="../assets/img/${hamburguesa.img}">
                 <div>${hamburguesa.cantidad} x ${hamburguesa.nombre}: $ ${parseInt(hamburguesa.cantidad) * hamburguesa.precio }</div>
             </div><hr>`;
+            listadoPedido.push(hamburguesa)
         }
     });
 
@@ -81,4 +84,6 @@ function resumenPedido() {
     $("#confirmar").click(function(){
         window.location.href=`formulariopedido.html`;
     });
+
+    localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 }

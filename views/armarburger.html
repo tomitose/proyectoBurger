@@ -56,25 +56,25 @@
                 <h2>Presentaciones:</h2>
             </div>    
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Simple" id="flexRadioDefault1" value="1">
+                    <input class="form-check-input" type="radio" name="presentacion" id="flexRadioDefault1" value="1">
                     <label class="form-check-label" for="flexRadioDefault1">
                     Simple
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Doble" id="flexRadioDefault2" checked  value="2">
+                    <input class="form-check-input" type="radio" name="presentacion" id="flexRadioDefault2" checked  value="2">
                     <label class="form-check-label" for="flexRadioDefault2">
                     Doble
                     </label>
                 </div>  
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Triple" id="flexRadioDefault1"  value="3">
+                    <input class="form-check-input" type="radio" name="presentacion" id="flexRadioDefault3"  value="3">
                     <label class="form-check-label" for="flexRadioDefault3">
                     Triple
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Cuádruple" id="flexRadioDefault1"  value="4">
+                    <input class="form-check-input" type="radio" name="presentacion" id="flexRadioDefault4"  value="4">
                     <label class="form-check-label" for="flexRadioDefault4">
                     Cuádruple
                     </label>
@@ -87,13 +87,13 @@
             </div>    
                 
             <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Pan" id="flexRadioDefault1" value="papa">
+                    <input class="form-check-input" type="radio" name="pan" id="flexRadioDefault1" value="papa">
                     <label class="form-check-label" for="flexRadioDefault6">
                     Pan de papa
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Pan" id="flexRadioDefault2" value="papaqueso">
+                    <input class="form-check-input" type="radio" name="pan" id="flexRadioDefault2" value="pan con queso">
                     <label class="form-check-label" for="flexRadioDefault7">
                     Pan de papa con queso
                     </label>
@@ -113,37 +113,37 @@
             </div>   
             
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" name= "lechuga" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Lechuga
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" name= "tomate" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Tomate
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" name= "bacon" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Bacon
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" name= "cebolla" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Cebolla Caramelizada
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" name= "cebollamorada" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Cebolla Morada
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" name= "pepinillos" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Pepinillos
                 </label>
@@ -163,25 +163,25 @@
             </div> 
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" name="salsa" type="checkbox" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Salsa especial
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" name="mayo" type="checkbox" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Mayonesa
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" name="ketchup" type="checkbox" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Ketchup
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" name="mostaza" type="checkbox" value="1" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Mostaza
                 </label>
@@ -208,6 +208,21 @@
 
     </section>
 
+        <!--Botón Agregar Pedido-->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tu pedido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+            </div>
+        </div>
 
     <script src="../assets/js/armado.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

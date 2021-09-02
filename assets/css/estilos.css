@@ -11,13 +11,6 @@
     margin-left: 50px;
 }
 
-#agregadoCarrito{
-    border-radius: 10px;
-    border: 2px #198754 solid;
-    margin-left: 50px;
-    display: none;
-    cursor: pointer;
-}
 
 
 .navCustom{
@@ -113,20 +106,24 @@
     margin-top: 30px;
 }
 
-.seccion-titulo{
+.seccionTitulo{
     padding: 50px 30px;
 }
 
-.seccion-titulo h2{
+.seccionTitulo h2{
     border-bottom: 2px solid #54a503;
     color: #000000;
     font-family: 'DM Serif Display', serif;
     font-size: 2.5rem;
     display: inline-block;
+    font-weight: 700;
+
 }
 
-.seccion-titulo p{
+.seccionTitulo p{
     padding-top: 50px;
+    font-weight: 700;
+    font-size: large;
 }
 
 

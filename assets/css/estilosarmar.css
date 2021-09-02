@@ -54,10 +54,16 @@
     border-radius: 10px;
     border: 2px #198754 solid;
     margin-left: 50px;
-    display: none;
     cursor: pointer;
+    background: #e4c49e;
 }
 
+
+#burgerFinalImg{
+    width: 65px;
+    margin-right: 15px;
+    border-radius: 4px;
+}
 
 /* MQuery */
 
