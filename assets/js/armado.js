@@ -1,8 +1,3 @@
-const listaHamburguesaArm = [
-    {nombre:"CUSTOM",precio:450,id:8,img:"armaBurger2.jpg",cantidad:1,carac:""}
-]
-
-
 
 //Carga inicial del modal
 let listadoPedido = JSON.parse(localStorage.getItem("listadoPedido"))
@@ -52,7 +47,12 @@ function eliminarBurger(idHamburguesa){
         
     }
     $(`#pedido${idHamburguesa}`).remove()
-
+    let total = 0
+    listadoPedido.forEach((hamburguesa) => {
+        total += parseInt(hamburguesa.cantidad) * hamburguesa.precio 
+    });
+    $(".tot").text(`Total: $ ${total}`)
+    localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 }
 
 
@@ -79,7 +79,12 @@ $("#btnAgregarArmado").click(function() {
         }
     })
     console.log("$",precio,desc)
+    const hamburguesa = {nombre:"CUSTOM",precio: precio,id:99,img:"armaBurger2.jpg",cantidad:1,carac:desc}
+    listadoPedido.push(hamburguesa)
+    localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
     $("html,body").animate({scrollTop:0},100)
+
+    document.getElementById("formularioArmado").reset();
 
 
 });
@@ -87,9 +92,47 @@ $("#btnAgregarArmado").click(function() {
 
 
 $("#agregadoCarrito").click(function(){
+
+    let listadoPedido = JSON.parse(localStorage.getItem("listadoPedido"))
+
+    let total = 0;
+    let pedido = "";
+    let hayHamburguesa = false;
+
+    listadoPedido.forEach((hamburguesa) => {
+        total += parseInt(hamburguesa.cantidad) * hamburguesa.precio 
+    });
+
+    listadoPedido.forEach(function(hamburguesa){
+        if(hamburguesa.cantidad > 0){
+            hayHamburguesa = true;
+            pedido +=`
+                    <div id="pedido${hamburguesa.id}">
+                    <div class= "d-flex modalPedido" >
+                    <img class= "imgMenuCompra" src="../assets/img/${hamburguesa.img}">
+                    <div>${hamburguesa.cantidad} x ${hamburguesa.nombre}: $ ${parseInt(hamburguesa.cantidad) * hamburguesa.precio }</div>
+                    <div> <button onclick="eliminarBurger(${hamburguesa.id})" class="btn btn-primary">Eliminar</button> </div>
+                    </div><hr></div>`;
+        }
+    });
+
+    if(hayHamburguesa){
+        pedido+=`<div class="tot">Total: $ ${total} </div>`
+        pedido+=`<button id='confirmar'>Confirmar pedido</button>`
+    }
+    else{
+        pedido+=`<div class="tot">No hay hamburguesas en el pedido</div>`
+    }
+
+    $(".modal-body").html(pedido);
+    $("#confirmar").click(function(){
+        window.location.href=`formulariopedido.html`;
+    });
     let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
     myModal.show()
 });
+
+
 
 
 

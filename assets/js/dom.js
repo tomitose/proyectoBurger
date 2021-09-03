@@ -105,5 +105,11 @@ function eliminarBurger(idHamburguesa){
         
     }
     $(`#pedido${idHamburguesa}`).remove()
+    let total = 0
+    listadoPedido.forEach((hamburguesa) => {
+        total += parseInt(hamburguesa.cantidad) * hamburguesa.precio 
+    });
+    $(".tot").text(`Total: $ ${total}`)
+    localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 
 }
