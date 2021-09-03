@@ -14,6 +14,7 @@ const listaHamburguesas = [
 //Lista hamburguesas//
 
 const ul = document.querySelector(".burgers");
+const listadoPedido = JSON.parse(localStorage.getItem("listadoPedido")) || []
 
 let html = "";
 
@@ -53,8 +54,8 @@ elemento.addEventListener("click",resumenPedido);
 function resumenPedido() {
     let total = 0;
     let pedido = "";
-    let listadoPedido = []
     let hayHamburguesa = false;
+    listadoPedido.splice(0,listadoPedido.length)
 
     listaHamburguesas.forEach((hamburguesa) => {
         hamburguesa.cantidad = document.getElementById(`cantidad${hamburguesa.id}`).value;
@@ -64,11 +65,14 @@ function resumenPedido() {
     listaHamburguesas.forEach(function(hamburguesa){
         if(hamburguesa.cantidad > 0){
             hayHamburguesa = true;
-            pedido +=`<div class= "d-flex">
-            <img class= "imgMenuCompra" src="../assets/img/${hamburguesa.img}">
-                <div>${hamburguesa.cantidad} x ${hamburguesa.nombre}: $ ${parseInt(hamburguesa.cantidad) * hamburguesa.precio }</div>
-            </div><hr>`;
             listadoPedido.push(hamburguesa)
+            pedido +=`
+                <div id="pedido${hamburguesa.id}">
+                <div class= "d-flex modalPedido" >
+                <img class= "imgMenuCompra" src="../assets/img/${hamburguesa.img}">
+                <div>${hamburguesa.cantidad} x ${hamburguesa.nombre}: $ ${parseInt(hamburguesa.cantidad) * hamburguesa.precio }</div>
+                <div> <button onclick="eliminarBurger(${hamburguesa.id})" class="btn btn-primary">Eliminar</button> </div>
+                </div><hr></div>`;
         }
     });
 
@@ -86,4 +90,18 @@ function resumenPedido() {
     });
 
     localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
+}
+
+
+function eliminarBurger(idHamburguesa){
+    for (let i = 0; i < listadoPedido.length; i++) {
+        const element = listadoPedido[i];
+        if(element.id == idHamburguesa){
+            listadoPedido.splice(i,1)
+            break
+        }
+        
+    }
+    $(`#pedido${idHamburguesa}`).remove()
+
 }

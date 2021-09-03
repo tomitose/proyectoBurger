@@ -1,3 +1,8 @@
+const listaHamburguesaArm = [
+    {nombre:"CUSTOM",precio:450,id:8,img:"armaBurger2.jpg",cantidad:1,carac:""}
+]
+
+
 
 //Carga inicial del modal
 let listadoPedido = JSON.parse(localStorage.getItem("listadoPedido"))
@@ -13,10 +18,13 @@ listadoPedido.forEach((hamburguesa) => {
 listadoPedido.forEach(function(hamburguesa){
     if(hamburguesa.cantidad > 0){
         hayHamburguesa = true;
-        pedido +=`<div class= "d-flex">
-        <img class= "imgMenuCompra" src="../assets/img/${hamburguesa.img}">
-            <div>${hamburguesa.cantidad} x ${hamburguesa.nombre}: $ ${parseInt(hamburguesa.cantidad) * hamburguesa.precio }</div>
-        </div><hr>`;
+        pedido +=`
+                <div id="pedido${hamburguesa.id}">
+                <div class= "d-flex modalPedido" >
+                <img class= "imgMenuCompra" src="../assets/img/${hamburguesa.img}">
+                <div>${hamburguesa.cantidad} x ${hamburguesa.nombre}: $ ${parseInt(hamburguesa.cantidad) * hamburguesa.precio }</div>
+                <div> <button onclick="eliminarBurger(${hamburguesa.id})" class="btn btn-primary">Eliminar</button> </div>
+                </div><hr></div>`;
     }
 });
 
@@ -27,14 +35,17 @@ if(hayHamburguesa){
 else{
     pedido+=`<div class="tot">No hay hamburguesas en el pedido</div>`
 }
-$(".modal-body").html(pedido);
 
+$(".modal-body").html(pedido);
+$("#confirmar").click(function(){
+    window.location.href=`formulariopedido.html`;
+});
 
 //Carrito//
 
 $("#btnAgregarArmado").click(function() {
     let desc = ""
-    let precio = 450
+    let precio = 450;
     let data = $("#formularioArmado").serializeArray();
     data.forEach((d) => {
         if(d.name == "presentacion"){
@@ -56,13 +67,15 @@ $("#btnAgregarArmado").click(function() {
     })
     console.log("$",precio,desc)
     $("html,body").animate({scrollTop:0},100)
-  });
+
+
+});
 
 
 
-  $("#agregadoCarrito").click(function(){
+$("#agregadoCarrito").click(function(){
     let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
-    myModal.show();
+    myModal.show()
 });
 
 
