@@ -112,4 +112,5 @@ function eliminarBurger(idHamburguesa){
     $(".tot").text(`Total: $ ${total}`)
     localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 
+    $(`#cantidad${idHamburguesa}`).val(0)
 }
