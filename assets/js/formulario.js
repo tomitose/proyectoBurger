@@ -18,5 +18,5 @@ $('#btnWhatsapp').click(function(e){
 
     });
     mensaje += "%0AMuchas gracias!"
-    window.location.href = 'https://api.whatsapp.com/send?text='+mensaje+'&phone=5493543552837'
+    window.location.href = 'https://api.whatsapp.com/send?text='+mensaje+'&phone=5493516709570'
 });
