@@ -33,7 +33,6 @@ listaHamburguesas.forEach(function(hamburguesa){
 //Carrito//
 
 
-
 $("#agregadoCarrito").click(function(){
     resumenPedido()
     let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
@@ -91,6 +90,9 @@ function resumenPedido() {
 
     localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 }
+
+
+//Carrito//
 
 
 function eliminarBurger(idHamburguesa){

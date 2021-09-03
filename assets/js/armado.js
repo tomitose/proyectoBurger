@@ -41,7 +41,20 @@ $("#confirmar").click(function(){
     window.location.href=`formulariopedido.html`;
 });
 
-//Carrito//
+
+function eliminarBurger(idHamburguesa){
+    for (let i = 0; i < listadoPedido.length; i++) {
+        const element = listadoPedido[i];
+        if(element.id == idHamburguesa){
+            listadoPedido.splice(i,1)
+            break
+        }
+        
+    }
+    $(`#pedido${idHamburguesa}`).remove()
+
+}
+
 
 $("#btnAgregarArmado").click(function() {
     let desc = ""
