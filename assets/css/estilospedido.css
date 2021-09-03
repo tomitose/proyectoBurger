@@ -48,6 +48,7 @@
 
 .etiquetaBurgers{
     margin: 30px 0;
+    padding: 20px;
 }
 
 .burgers{
@@ -69,7 +70,7 @@
 .btnAgregar {
     padding: 4px;
     background-color: #000000;
-    color: #ffffff;
+    color: #fafafa;
 }
 
 
@@ -97,4 +98,4 @@
     .btnAgregar {
         margin-bottom: 30px;
     }
-  }
+}

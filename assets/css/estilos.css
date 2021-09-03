@@ -6,6 +6,8 @@
 }
 
 
+
+
 .burgerLogo {
     width: 40px;
     margin-left: 50px;
@@ -21,28 +23,37 @@
 }
 
 .navCustom ul li a{
-    color: #ffffff;
+    color: #fafafa;
+    position: relative;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+
+.navCustom ul li a:hover{
+    color: rgb(22, 22, 22);
 }
 
 
 .btn-primary{
     background-color: #000000;
     border-color: #258d36;
-    color: #ffffff;
+    color: #fafafa;
     border: 1px solid transparent;
     border-radius: 4px;
+    transition: 0.5s;
 }
 
 .btn-primary:hover {
-    color: #fff;
-    background-color: #486443;
-    border-color: #ffffff;
+    color: #54a503;
+    background-color: #343833;
+    border-color: #fafafa;
 }
 
 .btn-check:focus+.btn-primary, .btn-primary:focus {
-    color: #fff;
+    color: #fafafa;
     background-color: #000000;
-    border-color: #ffffff;
+    border-color: #000000;
 }
 
 
@@ -81,7 +92,7 @@
     0 1px 3px rgba(0,0,0,.2);
     background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#000000),to(#000000));
     background-image: linear-gradient(#000000 10%,#34b700 100%);
-    color: #ffffff;
+    color: #fafafa;
 }
 
 
@@ -160,7 +171,7 @@
 footer{
     width: 100%;
     background: #54a503;
-    color: #fff;
+    color: #fafafa;
 }
 
 
