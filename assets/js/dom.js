@@ -116,6 +116,7 @@ function eliminarBurger(idHamburguesa){
     }
     if (total == 0){
         ocultar()
+        $(".tot").text(`No hay hamburguesas en el pedido`)
     }
 
     localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
