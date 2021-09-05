@@ -52,6 +52,12 @@ function eliminarBurger(idHamburguesa){
         total += parseInt(hamburguesa.cantidad) * hamburguesa.precio 
     });
     $(".tot").text(`Total: $ ${total}`)
+    function ocultar(){
+        document.getElementById('confirmar').style.display = 'none';
+    }
+    if (total == 0){
+        ocultar()
+    }
     localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 }
 
