@@ -4,7 +4,8 @@ $('#btnWhatsapp').click(function(e){
     const apellido = $("#inputApellido").val()
     const tel = $("#inputTelefono").val()
     if (!nombre || !apellido || !tel ){
-        alert("Ingresa los datos del formulario")
+        let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+        myModal.show();
         return
     }
     const listadoPedido = JSON.parse(localStorage.getItem("listadoPedido"))

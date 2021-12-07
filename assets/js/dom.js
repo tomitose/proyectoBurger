@@ -105,11 +105,20 @@ function eliminarBurger(idHamburguesa){
         
     }
     $(`#pedido${idHamburguesa}`).remove()
-    let total = 0
+    let total = 0;
     listadoPedido.forEach((hamburguesa) => {
         total += parseInt(hamburguesa.cantidad) * hamburguesa.precio 
     });
     $(".tot").text(`Total: $ ${total}`)
+
+    function ocultar(){
+        document.getElementById('confirmar').style.display = 'none';
+    }
+    if (total == 0){
+        ocultar()
+        $(".tot").text(`No hay hamburguesas en el pedido`)
+    }
+
     localStorage.setItem("listadoPedido", JSON.stringify(listadoPedido))
 
     $(`#cantidad${idHamburguesa}`).val(0)
